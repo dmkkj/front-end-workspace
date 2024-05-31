@@ -1,0 +1,168 @@
+/* 1. 전체 선택자 */
+* {
+  color: blue;
+}
+
+/* 2. 태그 선택자 */
+h3 {
+  background-color: yellow;
+}
+p {
+  color: dimgray;
+}
+
+/* 3. 클래스 선택자 */
+.class1 {
+  color: darkturquoise;
+}
+.class2 {
+  font-size: 30px;
+}
+
+#id1 {
+  background-color: indigo;
+  color: whitesmoke;
+}
+
+/* 5. 그룹 선택자 */
+#select1,
+#select2 {
+  background-color: orangered;
+}
+
+/* 6. 자식 선택자와 자손 선택자 */
+/* 자식 선택 '>' */
+#test1 > * {
+  background-color: pink;
+}
+/* test1 내에 있는 모든 li에 효과 적용. "한 칸 띄어쓰기"로 가능 */
+#test1 li {
+  color: orangered;
+}
+#test1 > ul > li {
+  background-color: darkcyan;
+  color: white;
+}
+
+/* 7. 속성 선택자 */
+/* div 요소들 중 name 속성값이 name1과 "일치"하는 요소 */
+div[name="name1"] {
+  background: orange;
+}
+/* div 요소들 중 name 속성값이 name1이 "포함"되어있는 요소 '~' */
+div[name~="name1"] {
+  background-color: deepskyblue;
+}
+/* div 요소들 중 class 속성값이 -c가 "포함"되어있는 요소 '*' */
+div[class*="-c"] {
+  color: red;
+}
+/* div 요소들 중 name 속성값이 na로 "시작"되는 요소 '^' */
+div[name^="na"] {
+  background-color: blue;
+}
+/* div 요소들 중 class 속성값이 class로 "시작"되는 요소 '|' */
+div[class|="class"] {
+  background-color: cyan;
+}
+/* div 요소들 중 class 속성값이 ss로 "끝"나는 요소 '$' */
+div[class$="ss"] {
+  color: white;
+}
+
+/* 8. 형제 선택자 */
+/* a + b : a 요소 바로 뒤에 있는 b 요소 "하나만" 선택 */
+#test2 + div {
+  background-color: yellow;
+}
+#test2 + p {
+  background-color: pink;
+  /* 제대로 선택 X (바로 뒤의 요소가 아니기 때문) */
+}
+/* a ~ b : a 요소 뒤에 "모든" b 요소 선택(a는 미포함) */
+#test2 ~ div {
+  background-color: beige;
+}
+#test2 ~ p {
+  background-color: deeppink;
+}
+
+/* 9. 반응 선택자 */
+.area {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+/* :active : 사용자가 클릭하고 있을 때 */
+#active-test:active {
+  background-color: magenta;
+  color: yellow;
+}
+#hover-test:hover {
+  background-color: maroon;
+  color: white;
+}
+input[name="userId"]:focus {
+  background: pink;
+}
+
+/* 10. 상태 선택자 */
+input[type="checkbox"]:checked {
+  width: 20px;
+  height: 20px;
+}
+/* 클릭 불가능 : disabled */
+button:disabled {
+  background-color: greenyellow;
+}
+/* 클릭 가능 : enabled */
+button:enabled {
+  background-color: violet;
+}
+
+/* 11. 구조 선택자 */
+/* 첫 번째 요소 : first-child / .test3-menu li:first-child { */
+#test3 li:first-child {
+  background-color: salmon;
+}
+/* 해당 유형 중 첫 번째 요소 : first-of-type */
+#test3 p:first-of-type {
+  color: green;
+}
+/* 마지막 요소 : last-child */
+#test3 li:last-child {
+  background: skyblue;
+}
+/* 해당 유형 중 마지막 요소 : last-of-type */
+#test3 li:last-of-type {
+  color: fuchsia;
+}
+/* 몇 번째 요소 : nth-child */
+/* even : 짝수, odd : 홀수 / ex. nth-child(even) */
+#test3 li:nth-child(3) {
+  background: darkcyan;
+}
+/* 해당 유형 중 몇 번째 요소 : nth-of-type */
+#test3 li:nth-of-type(2) {
+  color: white;
+}
+/* 뒤에서부터 몇 번째 요소 */
+#test3 li:nth-last-child(4) {
+  background: hotpink;
+}
+/* 뒤에서부터 해당 유형 중 몇 번째 요소 */
+#test3 li:nth-last-of-type(3) {
+  background: seagreen;
+}
+
+/* 12. 가상 요소 선택자 */
+#test4 p::before {
+  content: "앞";
+  color: blue;
+  background: lime;
+}
+#test4 p::after {
+  content: "뒤";
+  color: white;
+  background: black;
+}

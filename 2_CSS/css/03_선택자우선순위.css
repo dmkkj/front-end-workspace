@@ -1,0 +1,20 @@
+/* 우선순위 : #id > .class > div 태그 선택자 순. div 속성이 여러 개일 경우, 제일 마지막 설정이 적용 */
+/* id 선택자보다 우선순위가 높은 것은 인라인 방식. 직접 태그에 style="" 속성으로 지정하는 것 */
+#id1 {
+  background: deepskyblue;
+  color: yellow;
+}
+.class1 {
+  background: greenyellow;
+  color: orangered;
+}
+/* !important 넣으면 다 무시하고 우선순위 제일 높아짐(!important > 인라인 방식) */
+div {
+  background: teal !important;
+  color: white !important;
+  width: 200px;
+  height: 200px;
+}
+div {
+  background: pink;
+}
