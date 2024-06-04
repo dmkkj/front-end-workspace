@@ -1,6 +1,9 @@
+/* 가급적 position 쓰지 말기. 나중에 일부 변경 시 코드 전체를 엎어야 할 수 있음 */
+
 body {
   background-color: indianred;
 }
+
 /*
 .bao {
   position: relative;
@@ -16,16 +19,9 @@ body {
   margin: auto;
   margin-top: 30px;
   width: 300px;
-  height: 340px;
+  height: 350px;
   border: 2px solid white;
   border-radius: 10px;
-}
-
-h3 {
-  text-align: center;
-  /* padding-top: 110px; */
-  color: white;
-  font-family: "고딕체";
 }
 
 /*
@@ -40,7 +36,6 @@ h3 {
   background-size: 100px 110px;
 }
 */
-
 #baos {
   margin: auto;
   margin-top: 15px;
@@ -51,6 +46,45 @@ h3 {
   background-size: 120px 120px;
 }
 
+h3 {
+  text-align: center;
+  /* padding-top: 110px; */
+  color: white;
+  font-family: "고딕체";
+}
+
+.service {
+  margin: 20px;
+  padding-top: 15px;
+  width: 260px;
+  height: 35px;
+  border: 2px solid white;
+  text-align: center;
+}
+
+/* .service 추가하면서 수정
+#git {
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+#insta {
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+*/
+
+.service a {
+  color: white;
+  text-decoration: none;
+}
+.service:hover {
+  background-color: white;
+  color: black;
+}
+
+/* 처음 짠 코드
 #git {
   margin: 20px;
   width: 260px;
@@ -73,3 +107,4 @@ h3 {
   color: white;
   padding-top: 15px;
 }
+*/

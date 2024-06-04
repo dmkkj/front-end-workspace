@@ -1,0 +1,86 @@
+/* 속성 가이드
+position: fixed;
+height: vh;
+display: flex;
+justify-content: center;
+align-items: center;
+*/
+
+header {
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  /* justify-content: flex-end; */
+  justify-content: space-between;
+}
+
+h1 {
+  margin: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.display-inline-block {
+  display: inline-block;
+  margin: 15px;
+  color: black;
+}
+
+.display-inline-block:hover {
+  background-color: black;
+  color: white;
+}
+
+h2 {
+  margin-top: 300px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.frame1 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-color: red;
+  text-align: center;
+}
+
+.frame2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-color: purple;
+  text-align: center;
+}
+
+pre {
+  text-align: center;
+}
+
+.frame3 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-color: yellow;
+  text-align: center;
+}
+
+#top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
