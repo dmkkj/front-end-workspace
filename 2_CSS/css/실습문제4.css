@@ -13,32 +13,33 @@
   background-color: white;
   border-radius: 20%;
   margin: 0.6px;
+  animation: boxAni 0.3s linear infinite alternate;
 }
+
 /* animation-delay 속성을 .square:nth-child() 각각 사용!
 transform: scaleY */
-
 .square:nth-child(1) {
-  animation: boxAni 0.3s linear infinite alternate;
+  animation-delay: 0.1s;
 }
 .square:nth-child(2) {
-  animation: boxAni 0.3s linear infinite alternate;
+  animation-delay: 0.2s;
 }
 .square:nth-child(3) {
-  animation: boxAni 0.3s linear infinite alternate;
+  animation-delay: 0.3s;
 }
 .square:nth-child(4) {
-  animation: boxAni 0.3s linear infinite alternate;
+  animation-delay: 0.4s;
 }
 .square:nth-child(5) {
-  animation: boxAni 0.3s linear infinite alternate;
+  animation-delay: 0.5s;
 }
 .square:nth-child(6) {
-  animation: boxAni 0.3s linear infinite alternate;
+  animation-delay: 0.6s;
 }
 .square:nth-child(7) {
-  animation: boxAni 0.3s linear infinite alternate;
+  animation-delay: 0.7s;
 }
-/* animation-delay: boxAni 2s linear infinite alternate; */
+/* animation: boxAni 2s linear infinite alternate; */
 /*
     @keyframes 애니메이션이름 {
         from { 시작 프레임 설정 }
