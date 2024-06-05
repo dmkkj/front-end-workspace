@@ -1,0 +1,85 @@
+/* flex 사용하는 것이 영역 잡기 쉬움. 유튜브도 flex 많이 사용 */
+header {
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  display: flex; /* display: flex; 부모한테 주는 것 */
+  justify-content: space-between;
+  /* 중심축을 중심으로 정렬을 바꾼다 -> justify-content
+  간격을 벌리는 설정은 space 중에 있다고 생각하기.
+  space-between 양쪽 사이드로 완전히 붙여버림 */
+  height: 80px;
+  /* line-height: 80px;*/
+  align-items: center;
+}
+header > * {
+  width: 33.33%;
+  display: flex;
+}
+header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 15px;
+}
+header form {
+  justify-content: center;
+}
+header nav {
+  justify-content: end;
+  height: 100%;
+  /* display: flex; */
+}
+header nav a {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+header nav a:hover {
+  background-color: black;
+  color: white;
+}
+
+section {
+  height: 100vh; /* 지금 현재 보고 있는 브라우저 영역, 높이만큼만 영역 설정 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* flex의 배열을 바꾸는 속성 */
+  text-align: center;
+}
+/* 정중앙 배치
+  display: flex;
+  justify-content: center;
+  align-items: center;
+*/
+#section1 {
+  background-color: red;
+}
+#section2 {
+  background-color: purple;
+}
+#section3 {
+  background-color: yellow;
+}
+section h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+section p {
+  line-height: 1.5; /* 줄 사이 간격 설정 */
+}
+
+.top {
+  position: fixed; /* position: fixed; 항상 화면에서 고정시킬 때 사용 */
+  bottom: 10px;
+  right: 10px;
+  background-color: black;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

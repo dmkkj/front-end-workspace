@@ -14,6 +14,10 @@ header {
   /* justify-content: flex-end; */
   justify-content: space-between;
 }
+header nav {
+  height: 100%;
+  display: flex;
+}
 
 h1 {
   margin: 10px;
@@ -27,7 +31,7 @@ h1 {
   color: black;
 }
 
-.display-inline-block:hover {
+nav .display-inline-block:hover {
   background-color: black;
   color: white;
 }
@@ -76,8 +80,8 @@ pre {
   width: 50px;
   height: 50px;
   background-color: black;
-  border-radius: 50%;
   color: white;
+  border-radius: 50%;
   text-decoration: none;
 
   display: flex;

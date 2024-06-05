@@ -1,0 +1,84 @@
+header {
+  background-image: url("../../resources/background.jpg");
+  /* background-repeat: no-repeat; >> background-size: cover; 적용 시 필요없는 코드 */
+  background-size: cover;
+  background-position: center; /* 해설 후 추가한 코드 add */
+  background-color: rgba(0, 0, 0, 0.4); /* add */
+  background-blend-mode: color; /* add */
+  position: fixed;
+  width: 300px; /* padding-left: 15%; */
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 이미지 dim 처리 시도해봄
+header img {
+  position: fixed;
+  width: 15%;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0);
+}
+*/
+
+header h1 {
+  font-size: 60px;
+  padding-top: 80px;
+  /*
+  display: flex;
+  justify-content: center;
+  */
+  /* text-decoration: underline; */ /* text-decoration은 font-size의 영향을 받음. border-bottom 사용 */
+  border-bottom: 2px solid white; /* add */
+  padding-bottom: 5px; /* add */
+}
+
+/*
+nav {
+  display: flex;
+  flex-direction: column;
+}
+*/
+header nav {
+  padding-bottom: 60px; /* add */
+}
+
+header a {
+  color: white;
+  text-decoration: underline;
+  /*
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  */
+  display: block; /* add */
+  font-size: 18px; /* add */
+  margin: 15px; /* add */
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  padding-left: 300px; /* padding-left: 15%; */
+}
+.section h2 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.section img {
+  width: 600px;
+  height: 400px;
+  margin: 20px;
+  /* text-align: center; >> 틀림 */
+  align-self: center; /* 해설 후 추가한 코드 */
+}
+.section p {
+  line-height: 1.5;
+  margin-left: 20px;
+  /* padding: 10px; */
+}

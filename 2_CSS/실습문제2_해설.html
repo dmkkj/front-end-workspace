@@ -3,23 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>실습문제2_해설</title>
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/실습문제2.css" />
+    <!-- 앞으로 기본적으로 나오는 속성들 reset.css 파일에 넣어놓으면 편함 -->
+    <link rel="stylesheet" href="css/실습문제2_해설.css" />
   </head>
   <body>
+    <!--
+      참고로 영역이 어느정도인지 감이 안 잡힌다면
+      임시적으로 background-color 배경색 넣어서 개발하는 것도 추천!
+    -->
     <header>
       <!-- header - position: fixed, flex -->
       <h1>LOGO</h1>
+      <form>
+        <input type="serarch" />
+        <button>검색</button>
+      </form>
       <nav>
         <!-- inline 속성 : width, heigh 적용 X -->
-        <a href="">Heading1</a>
-        <a href="">Heading2</a>
-        <a href="">Heading3</a>
+        <a href="#section1">Heading 1</a>
+        <a href="#section2">Heading 2</a>
+        <a href="#section3">Heading 3</a>
       </nav>
     </header>
     <!-- section : 100vh, flex, column(방향 바꿔줘야함), center -->
-    <section>
+    <section id="section1">
       <h2>Heading 1</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod fugit ea
@@ -28,7 +37,7 @@
         voluptates officiis odit!
       </p>
     </section>
-    <section>
+    <section id="section2">
       <h2>Heading 2</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod fugit ea
@@ -37,7 +46,7 @@
         voluptates officiis odit!
       </p>
     </section>
-    <section>
+    <section id="section3">
       <h2>Heading 3</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod fugit ea
@@ -47,6 +56,6 @@
       </p>
     </section>
     <!-- TOP : fixed -->
-    <a href="">TOP</a>
+    <a href="" class="top">TOP</a>
   </body>
 </html>

@@ -1,0 +1,54 @@
+.header {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-image: url(../../resources/background.jpg); /* 서버에서 변경되는 사항이 아니면 background-image 사용 */
+  background-blend-mode: color;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 300px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* justify-content : 무조건 세로 기준이 아니라 flex-direction의 방향에 따라 바뀌는 것. (주축 정렬) 주축을 바꿀 시 달라짐*/
+  align-items: center;
+}
+.header h2 {
+  font-size: 5rem;
+  border-bottom: 2px solid white;
+  padding-bottom: 15px;
+  margin-top: 30px;
+}
+.header nav {
+  margin-bottom: 100px;
+}
+.header a {
+  color: white;
+  display: block; /* 인라인 속성을 블록으로 바꾸기 */
+  font-size: 1.5rem;
+  margin: 20px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+/* background-color, background-image 따로 쓰면 적용 안 됨. 같이 붙여쓸 수 있는 코드 : background-blend-mode */
+.content {
+  padding: 20px 20px 20px 320px;
+  /* padding-left: 320px; >> padding 한번에 처리 */
+  display: flex; /* 가로로 정렬 default */
+  flex-direction: column;
+  /* padding-top: 20px; */
+}
+.content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.content img {
+  width: 100%;
+  max-width: 500px; /* 해당하는 이미지 크기의 최대 크기 고정 */
+  align-self: center;
+  margin: 20px;
+}
+.content p {
+  line-height: 1.5;
+}

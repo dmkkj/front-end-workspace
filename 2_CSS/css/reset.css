@@ -127,3 +127,13 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+/* 앞으로 기본적으로 나오는 속성들 reset.css 파일에 넣어놓으면 편함 */
+/* ↓ 추가한 설정 */
+a {
+  text-decoration: none;
+  color: black;
+}
+/* header나 다른 설정이 들어가도 box-sizing: border-box; 시 바뀌지 않음 */
+* {
+  box-sizing: border-box;
+}
