@@ -21,24 +21,10 @@
            예) 킬로그램 : 60  
      -->
     <script>
-      const kg = 60; // const kg = 1000;
-      const pound = kg * 2.2;
-      console.log("킬로그램 : " + pound);
-      /*
-      const kg = kilogram;
-      const pound = pound;
-      let result
-      console.log(kg);
-
-      console.log("킬로그램 : " + pound + "b");
-      */
-      /*
-      const num1 = 60;
-      const num2 = 2.2;
-      const result = b;
-
-      console.log(num1 * num2, b);
-      */
+      console.log("---- Q1 ----");
+      const kg = 60;
+      const lb = kg * 2.2; // '*'는 연산자로 인식. 기호 아님
+      console.log(lb);
     </script>
 
     <!--
@@ -47,9 +33,10 @@
            예) 제곱미터 : 99
     -->
     <script>
-      const m2 = 99; // const m2 = 300;
-      const m3 = m2 * 0.3;
-      console.log("제곱미터 : " + m3);
+      console.log("---- Q2 ----");
+      const m2 = 99;
+      const py = m2 * 0.3;
+      console.log(py);
     </script>
 
     <!-- 
@@ -58,12 +45,13 @@
            예) 윗변 : 10, 밑변 : 14, 높이 : 4
      -->
     <script>
-      // 사다리꼴 trapezoid. u : 10, b : 14, h : 4
-      const u = 10; // 윗변
-      const b = 14; // 밑변
-      const h = 4; // 높이
-      trapezoid = ((u + b) / 2) * h;
-      console.log("사다리꼴의 넓이 = " + trapezoid);
+      console.log("---- Q3 ----");
+      // const top = 10; // SyntaxError: Identifier 'top' has already been declared
+      const upper = 10;
+      const lower = 14;
+      const height = 4;
+      const trape = ((upper + lower) / 2) * height;
+      console.log(trape);
     </script>
 
     <!-- 
@@ -72,31 +60,39 @@
            - 예) 정기 예금액 : 12,000,000
     -->
     <script>
-      const Deposit = 12000000; // 변수명 소문자로 쓰자..
-      i = (Deposit * 0.04) / 12;
-      console.log("월 이자 = " + i);
+      console.log("---- Q4 ----");
+      const deposit = 12000000;
+      const monthly = (deposit * 0.04) / 12;
+      console.log(monthly);
     </script>
 
     <!-- 
         Q5. 머쓱이는 55살인 선생님이 몇 년도에 태어났는지 궁금해졌다. 나이 age가 주어질 때, 2024년을 기준 출생 연도를 console에 출력하시오.
      -->
     <script>
+      console.log("---- Q5 ----");
       const age = 55;
-      console.log(`선생님 출생 연도는 ${2024 - age}년입니다.`);
+      const year = 2024 - age;
+      // const year = 2024 - age + 1; 만 나이로 구하기
+      console.log(year);
     </script>
 
-    <!-- 
+    <!-- // 코딩테스트 0단계 문제
         Q6. 머쓱이는 추운 날에도 아이스 아메리카노만 마신다. 아이스 아메리카노는 한잔에 5,500원이다. 
             머쓱이가 가지고 있는 돈이 15,000원 일 때, 머쓱이가 최대로 마실 수 있는 아메리카노의 잔 수와 남는 돈을 console에 출력하시오.
      -->
     <script>
-      const aa = 5500;
+      console.log("---- Q6 ----");
+      const americano = 5500;
       const money = 15000;
+      // 최대로 마실 수 있는 아메리카노 잔 수
+      const cups = parseInt(money / americano);
+      // console.log(cups);
+      // 남은 돈
+      const change = money % americano;
+      // console.log(change);
       console.log(
-        "현재 보유 금액으로 마실 수 있는 아메리카노 잔 수는 " +
-          parseInt(money / aa) +
-          "잔,",
-        "남는 돈은 " + (money % aa) + "원 입니다."
+        `최대로 마실 수 있는 아메리카노 잔 수는 ${cups}잔, 남은 돈은 ${change}원`
       );
     </script>
 
@@ -105,30 +101,14 @@
           양꼬치 64인분과 음료수 6개를 먹었다면 총얼마를 지불해야 하는지 console에 출력하시오.
      -->
     <script>
-      const food = 12000;
-      const drink = 2000;
-
-      let fn = 64; // 양꼬치 n인분
-      let dn = 6; // 음료수 n개
-
-      const free = parseInt(fn / 10);
-
-      const foodsum = food * fn;
-      const drinksum = drink * dn;
-      const sum = foodsum + drinksum;
-
-      const pay = sum - free * drink;
-
-      console.log(
-        "지불해야 할 돈은 " +
-          sum +
-          "원입니다만, " +
-          "음료수 " +
-          free +
-          "개가 서비스 입니다. 총 결제 금액은 " +
-          pay +
-          "원 입니다."
-      );
+      // 값이 변해도 알아서 계산해서 돌아가게 프로그램 짜야 함
+      console.log("---- Q7 ----");
+      const lamb = 64;
+      const drink = 6;
+      const service = parseInt(lamb / 10);
+      // console.log(service);
+      const total = lamb * 12000 + (drink - service) * 2000;
+      console.log(total);
     </script>
   </body>
 </html>

@@ -64,5 +64,45 @@
         console.log("유아");
       }
     </script>
+
+    <!--
+      switch(데이터) {
+        case 조건 A(값) :     // 해당하는 데이터가 맞냐 안 맞냐
+            조건 A가 true
+            break;
+        case 조건 B(값) :
+            조건 B가 true
+            break;
+        default :
+            모든 조건이 false
+      }
+    -->
+    <script>
+      const number = prompt("숫자를 입력하세요");
+      console.log("74번째 줄 >> " + number); // 내가 입력한 값이 변수에 담겨서 출력
+      // number 값이 짝수이면 짝수(number % 2 === 0),
+      // 홀수이면 홀수(number % 2 === 1) 출력! // (number % 2 !== 0) 이것도 홀수
+      // 그 외에는 숫자가 아닙니다 라고 출력!
+      // if 문
+      if (number % 2 === 0) {
+        console.log("짝수");
+      } else if (number % 2 === 1) {
+        console.log("홀수");
+      } else {
+        console.log("숫자가 아닙니다");
+      }
+
+      // switch 문
+      switch (number % 2) {
+        case 0:
+          console.log("짝수");
+          break; // 해당하는 문에서 나가려면 break 사용. 중괄호에서 나가게 하는 역할
+        case 1:
+          console.log("홀수");
+          break;
+        default:
+          console.log("숫자가 아닙니다");
+      }
+    </script>
   </body>
 </html>

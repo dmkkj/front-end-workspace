@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함수</title>
+  </head>
+  <body>
+    <h1>함수</h1>
+
+    <!-- 선언적 함수 -->
+    <script>
+      // function 함수명(매개변수) { return 결과값; }
+      // 함수명 : camelCase(낙타표기법)
+      function sample() {
+        console.log("Hello~~"); // >> 얘를 실행시키려면 함수를 호출해야 함
+      }
+      sample();
+
+      /*
+      // 아무리 많이 만들어 놓아도 호출되기 전까지 실행 안 함
+      function plus(a, b) {
+        console.log(`a : ${a}, b : ${b}`);
+      }
+      */
+
+      // 두 수를 더하는 기능을 가진 함수
+      function plus(a, b) {
+        return a + b;
+      }
+      // plus(1, 2); // 매개변수
+      const result = plus(1, 2);
+      console.log(result); // 3
+
+      const result2 = plus(10, 30);
+      console.log(result2); // 40
+    </script>
+
+    <!-- 변수의 유효범위(scope)
+          -> 바깥에 있는 변수는 안에서 사용 가능,
+             안쪽에 있는 변수는 해당 영역 내에서만 사용 가능 
+    -->
+    <script>
+      const num1 = 100;
+
+      // 호이스팅 : 함수, 클래스 등을 맨 위로 끌어올리는 것처럼 보이는 현상
+      sample2();
+
+      // 함수 밖에 있는 변수 쓸 수 있으나 함수 안에 변수가 지정되면 그 변수의 우선순위가 가장 높아짐
+      function sample2() {
+        const num1 = 200;
+        console.log(`sample2 내부 : ${num1}`); // 200
+
+        function sample3() {
+          const num2 = 300;
+        }
+      }
+      console.log(`sample2 외부 : ${num1}`); // 100. 함수 내에 있는 num1 값은 못 찾음
+      // console.log(`num2 : ${num2}`); // 오류!
+      // sample2();
+    </script>
+
+    <!-- 익명 함수 -->
+    <!-- const 함수명 = function (매개변수) { return 결과값; } >> 함수명이 사라짐. 함수 자체를 변수에 담아서 사용 -->
+    <script>
+      /* 선언적 함수
+      function minus(a, b) {
+        return a - b;
+      };
+      console.log(minus(70, 30)); // 40
+
+      */
+      const minus = function (a, b) {
+        return a - b;
+      };
+      console.log(minus(70, 30)); // 40
+    </script>
+
+    <!-- 화살표 함수 -->
+    <!-- React는 요즘 거의 화살표 함수 사용 -->
+    <!-- const multiply = function (a, b) { >> function 단어 사라지고 화살표(=>) -->
+    <script>
+      const multiply = (a, b) => {
+        return a * b;
+      };
+      console.log(multiply(3, 7)); // 21
+    </script>
+
+    <!-- 배열.함수(콜백함수) -->
+    <!-- 함수 호출하면서 또 다른 함수를 호출 -->
+    <script>
+      const arr = [1, 2, 3, 4, 5, 6, 7];
+      // forEach : 값을 하나씩 가져올 수 있다.
+      // 배열.forEach((값, 인덱스, 배열) => {});
+      // 배열 가지고 반복문 돌리는 것보다 forEach를 사용해도 됨
+      arr.forEach((value, index, array) => {
+        console.log(`value : ${value}, index : ${index}, array : ${array}`);
+      });
+
+      // map : 리턴한 값들을 기반으로 새로운 배열을 만든다.
+      // function () 안에 익명함수, 화살표 함수만 사용 가능. 선언적 함수 X
+      // 배열.map((값, 인덱스, 배열) => {});
+      const arr2 = arr.map(function (value) {
+        return value * 2;
+        // console.log(value);
+      });
+      console.log(arr2); // [2, 4, 6, 8, 10, 12, 14]
+
+      // filter : 리턴한 값들이 true인 것들만 모아서 새로운 배열을 만든다.
+      // 배열.filter((값, 인덱스, 배열) => {});
+      const arr3 = arr.filter((value) => {
+        return value % 2 === 0; // value가 짝수인 경우만 담겠다. return 부분에 조건이 들어감. 조건 중에 해당하는 것들만 넣겠다
+      });
+      console.log(arr3); // [2, 4, 6]
+
+      // reduce : 하나의 결과값을 반환한다.
+      // 배열.reduce((누적된 값, 값, 인덱스, 배열) => {}, 초기값);
+      const result3 = arr.reduce(function (acc, value) {
+        return acc + value;
+      }, 2);
+      console.log(result3); // 28.  }, 2); >> 2 더한 값. 30
+    </script>
+  </body>
+</html>
