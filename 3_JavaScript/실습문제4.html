@@ -9,40 +9,108 @@
     <!-- Q1. 100 ~ 200 정수 중 5의 배수가 아닌 수를 출력하세요 -->
     <script>
       console.log("--- Q1 ---");
+      let num = 100;
+      for (num = 1; num <= 100; num++) {
+        if (num % 5 !== 0) {
+          console.log(num);
+        }
+      }
     </script>
 
     <!-- Q2. 1 ~ 1000 정수 중 3의 배수의 합계를 출력하세요 -->
-    <script></script>
+    <script>
+      console.log("--- Q2 ---");
+      let sum = 0;
+      for (let i = 0; i <= 1000; i += 3) {
+        sum += i;
+      }
+      console.log("3의 배수의 합계 : " + sum);
+    </script>
 
     <!-- Q3. 문자열의 문자들을 하나씩 출력하세요 -->
     <script>
-      const str = "안녕하세요. 반갑습니다!";
+      console.log("--- Q3 ---");
+
+      const str = "안녕하세요. 반갑습니다!".split("");
+      // console.log(str);
+
+      for (const value of str) {
+        console.log(value);
+      }
     </script>
 
     <!-- Q4. 배열 값 중 최대값을 출력하세요 -->
     <script>
+      console.log("--- Q4 ---");
       const nums = [3, 7, 12, 5, 3];
+
+      for (const index in nums) {
+        console.log(nums[index]);
+      }
     </script>
 
     <!-- Q5. 1 ~ 10 정수 중 소수(1과 자기자신)를 출력하세요
               2, 3, 5, 7
     -->
-    <script></script>
+    <script>
+      console.log("--- Q5 ---");
+    </script>
 
     <!-- Q6. 배열 안의 데이터를 모두 2배로 만들어서 출력하세요 -->
     <script>
+      console.log("--- Q6 ---");
       const nums2 = [1, 3, 5];
+
+      const nums2Arr = nums2.map(function (value) {
+        return value * 2;
+      });
+      console.log(nums2Arr);
     </script>
 
     <!-- Q7. 배열에 있는 데이터들로 합계와 평균을 출력하세요 -->
     <script>
+      console.log("--- Q7 ---");
       const nums3 = [90, 85, 70, 86, 97];
+
+      // reduce : 하나의 결과값을 반환한다.
+      // 배열.reduce((누적된 값, 값, 인덱스, 배열) => {}, 초기값);
+      const sums3 = nums3.reduce(function (acc, value) {
+        return acc + value;
+      });
+      const avg3 = nums3.reduce(function (acc, value) {
+        return sums3 / 5;
+      });
+      console.log(`합계: ${sums3}`);
+      console.log(`평균: ${avg3}`);
+
+      /* 시도
+      console.log(nums3);
+
+      const sum3 = nums3.map(function (value) {
+        return value;
+      });
+      console.log(sum3);
+
+      const sums3 = "";
+      for (let i = 0; i < nums3.length; i++) {
+        sums3 += nums3[i];
+        avg = nums3[i] / i;
+      }
+      console.log(nums3[i]);
+      console.log(avg);
+      */
     </script>
 
     <!-- Q8. 두 배열의 각 데이터의 곱셈을 한 데이터들로 이루어진 새로운 배열을 생성하여 출력하세요 -->
     <script>
+      console.log("--- Q8 ---");
       const a1 = [12, 0, 2, 5, 4];
       const b1 = [5, 15, 6, 7, 8];
+
+      const a1b1 = a1.map(function (value1) {
+        return value * 2;
+      });
+      console.log(nums2Arr);
     </script>
 
     <!-- Q9. 두 배열의 데이터 값이 서로 같은 데이터들만 이루어진 새로운 배열을 생성하여 출력하세요

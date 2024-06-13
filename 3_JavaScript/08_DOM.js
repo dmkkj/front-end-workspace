@@ -29,7 +29,7 @@ function btn4() {
 function btn5() {
   let div = document.querySelector("#testId2"); // querySelector 하나만 가지고 올 때 사용
   console.log(div); // <div id="testId2" class="testClass" name="testName">Hello, JavaScript!</div>
-  div = document.querySelectorAll("div");
+  div = document.querySelectorAll("div"); // querySelectorAll 배열로 가지고 오기
   console.log(div); // [div#testId.testClass, div#testId2.testClass]
   console.log(div[0]); // <div id="testId" class="testClass" name="testName">Hello, World!</div>
 }

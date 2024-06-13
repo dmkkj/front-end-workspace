@@ -1,0 +1,73 @@
+body {
+  text-align: center;
+}
+
+img {
+  object-fit: cover; /* add */
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 15px;
+}
+
+/* 하나로 합쳐도 무방.
+.game {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+}
+.game img {
+  border-radius: 50%;
+  margin: 15px;
+}
+*/
+
+/*
+.button {
+  display: flex;
+  justify-content: center;
+}
+#click:enabled {
+  background-color: hotpink;
+  color: navy;
+  width: 80px;
+  height: 30px;
+  font-weight: 700;
+  border-radius: 10%;
+  border: none;
+  margin: 5px;
+}
+#restart:enabled {
+  background-color: navy;
+  color: hotpink;
+  width: 80px;
+  height: 30px;
+  font-weight: 700;
+  border-radius: 10%;
+  border: none;
+  margin: 5px;
+}
+*/
+button {
+  cursor: pointer; /* add */
+  width: 90px;
+  height: 40px;
+  font-weight: 700;
+  border-radius: 10%;
+  border: none;
+  margin: 5px;
+}
+#click:enabled {
+  background-color: hotpink;
+  color: navy;
+}
+#restart:enabled {
+  background-color: navy;
+  color: hotpink;
+}
+
+/* p { */
+#result {
+  font-weight: bold;
+  font-style: italic;
+}
