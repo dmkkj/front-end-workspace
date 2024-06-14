@@ -20,6 +20,7 @@
       const regExp1 = /java/; // const regExp1 = /패턴/; >> 패턴에 해당하는 문자가 (str1) 문자열에 있는지 체크
       /*
         RegExp : 객체에서 제공하는 함수
+        1. **정규식.test(문자열)** : 문자열에서 정규식값과 일치하는 값이 있으면 true, 없으면 false
         2. 정규식.exec(문자열) : 문자열에서 정규식값과 일치하는 값이 있으면 처음 매칭된 문자열 리턴, 없으면 null 리턴
       */
       area1.innerHTML = `test : ${regExp1.test(str1)}<br>`;
