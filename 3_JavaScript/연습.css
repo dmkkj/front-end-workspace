@@ -1,0 +1,14 @@
+form {
+  border: 1px solid lightgray;
+  padding: 10px;
+}
+
+form div {
+  margin-bottom: 10px;
+}
+
+form span {
+  display: block;
+  color: gray;
+  margin-left: 10px;
+}
