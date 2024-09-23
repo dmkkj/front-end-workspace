@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+</head>
+<body>
+
+    <!-- html에서 구조로 짰던 것들을 React에서는 전부 javaScript로 처리. React 컴포넌트들로 만들 거임 -->
+    <div id="root"></div>
+    <script>
+        let count = 0;
+        const setCount = () => {
+            count++; // setCount가 버튼 클릭 될 때마다 count 처리
+
+            const h1 = React.createElement("h1", null, "Total Clicks : " + count); // 태그, 속성값, 텍스트
+            const button = React.createElement(
+                "button", 
+                { onClick: setCount }, 
+                "Click!"
+            );
+
+            const container = React.createElement("div", null, h1, button);
+            // div라는 태그 안에. h1, button 만들어놓은 것 집어넣기
+            ReactDOM.render(container, root);
+        };
+
+        const root = document.querySelector("#root");
+        const h1 = React.createElement("h1", null, "Total Clicks : " + count); // 태그, 속성값, 텍스트
+        const button = React.createElement(
+            "button", 
+            { onClick: setCount }, 
+            "Click!"
+        );
+
+        const container = React.createElement("div", null, h1, button); // 태그 여러 개가 올 수 있음
+        // div라는 태그 안에. h1, button 만들어놓은 것 집어넣기
+        ReactDOM.render(container, root);
+
+        /*
+        // 이제 만들어놓은 h1을 root에 집어넣기
+        ReactDOM.render(h1, root); // 1st: 집어넣을 것, 2nd: 어디에 넣을 건지
+        ReactDOM.render(button, root); // 상위에 만들 때마다 내가 추가하고자 하는 게 하나 이상이면 render 랜더링 불가
+        */
+
+    </script>
+</body>
+</html>

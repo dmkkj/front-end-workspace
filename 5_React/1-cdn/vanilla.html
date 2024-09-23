@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Total Clicks : <span>0</span></h1>
+    <button onclick="setCount()">Click!</button>
+
+    <script>
+        // 클릭 이벤트 걸기만 하면 되어 사실상 onclick 안 써도 상관은 없음
+        // 화살표 함수 사용!
+        const span = document.querySelector("span");
+
+        let count = 0;
+        const setCount = () => {
+            // alert("!"); // 확인해보기
+            /*
+            count++;
+            span.innerHTML = count;
+            */
+            span.innerHTML = parseInt(span.innerHTML) + 1;
+        }
+
+    </script>
+</body>
+</html>
